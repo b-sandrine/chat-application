@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "It will serve as chat app server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b-sandrine/chat-application.git"
+  },
+  "keywords": [
+    "chat",
+    "server",
+    "app"
+  ],
+  "author": "Sandrine, Cedrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b-sandrine/chat-application/issues"
+  },
+  "homepage": "https://github.com/b-sandrine/chat-application#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21"
+  }
+}
