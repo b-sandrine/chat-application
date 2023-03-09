@@ -7,4 +7,4 @@ Simple chat application using React, socket.io and Node js
 
 # run backend
 - cd backend
--npm start
+- npm start
