@@ -1,13 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import Welcome from './pages/Welcome'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <h1>Welcome to frontend part</h1>
+    <div className="app--container">
+      <Routes>
+        <Route path='/' element={ <Welcome /> }></Route>
+        <Route path='/login' element= { <Login /> }></Route>
+        <Route path='/register' element = { < Register /> }></Route>
+      </Routes>
     </div>
   )
 }
