@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 const cors = require('cors')
 
 dotenv.config()
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 2000;
 
 var app = express();
 
@@ -14,15 +14,29 @@ const http = require('http').Server(app)
 
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: "http://localhost:5173/"
+        origin: "*"
     }
 })
 
+let users = [];
+
 socketIO.on('connection', (socket) => {
     console.log(`⚡: ${socket.id} user just connected!`)
+
+    socket.on('message', (data) => {
+        socketIO.emit('messageResponse',data)
+    })
+
+    socket.on('newUser', (data) => {
+        users.push(data);
+        socketIO.emit('newUserResponse', users);
+    });
+
     socket.on('disconnect',() => {
         console.log('🔥: A user disconnected')
+        socket.disconnect()
     })
+
 })
 
 app.get('/', (req,res) => {
