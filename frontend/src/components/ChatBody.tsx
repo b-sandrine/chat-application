@@ -3,20 +3,22 @@ import { useState, useEffect } from "react";
 
 const ChatBody = () => {
 
-    const [messages, setMessages ] = useState([])
+    const [messages, setMessages ] = useState<string[]>([])
 
-    const socket = io('http://localhost:2000',{
+    const socket = io('http://localhost:8000',{
         transports: ['websocket'],
     });
 
     useEffect(() => {
-        socket.on('messageResponse', (data) => {
-            console.log("The data is " +data)
-            setMessages(data)
+        socket.on('messageResponse', (data: string) => {
+            setMessages(prevMessages => [...prevMessages, data])
+            
+            return () => {
+                socket.disconnect();
+            }
         });
-      }, [socket, messages]);
-      
-      console.log(messages)
+      }, []);
+    
 
     return (
         <div className="chatBody--container">

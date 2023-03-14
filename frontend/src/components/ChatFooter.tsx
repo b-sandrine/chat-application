@@ -5,7 +5,7 @@ import { io } from 'socket.io-client'
 export default function ChatFooter() {
     const [message, setMessage] = useState('')
 
-    const socket = io('http://localhost:2000',{
+    const socket = io('http://localhost:8000',{
         transports: ['websocket'],
     });
 

@@ -5,7 +5,7 @@ import { io } from 'socket.io-client'
 export default function Login() {
     const navigate = useNavigate();
     const [username, setUserName ] = useState('');
-    const socket = io('http://localhost:2000',{
+    const socket = io('http://localhost:8000',{
         transports: ['websocket'],
     });
 
