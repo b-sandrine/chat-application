@@ -8,8 +8,14 @@ body {
 }
  /* chat part starting */
 
+ /*  linear gradient colors: db4747  #f4af58  */
+
+
+
+/* background: linear-gradient(180deg, rgba(244, 175, 88, 0.7) 27.6%, rgba(219, 71, 71, 0.86) 76.04%); */
+
 .chat--container {
-    background-color: rgba(250, 232, 209, 0.911);
+    background-color: #feebd7;
     width: 100%;
     height: 100%; 
     display: flex;
@@ -67,7 +73,7 @@ body {
 .chat--container .left--sidebar .left--sidebar--menu .menu--holder .single--item .icon {
     flex: 0 0 25%;
     max-width: 25%;
-    text-align: center;
+    align-self: center;
     font-size: 20px;
 }
 
@@ -76,7 +82,7 @@ body {
 }
 
 .chat--container .left--sidebar .left--sidebar--menu .menu--holder .single--item:hover {
-    background-color: red;
+    background: linear-gradient(90deg, rgba(255, 163, 50, 0.801) 10.6%, rgba(240, 64, 64, 0.86) 56.04%);;
     color: white;
     font-weight: bold;
 }
@@ -109,7 +115,7 @@ body {
 .chat--container .right--sidebar .right--sidebar--heading .works .chat button {
     width: 150px;
     height: 40px;
-    background-color: red;
+    background: linear-gradient(90deg, rgba(244, 175, 88, 0.7) 27.6%, rgba(219, 71, 71, 0.86) 76.04%);
     border: none;
     border-radius: 10px;
     margin-top: -5px;
@@ -219,7 +225,7 @@ body {
 .chat--container .right--sidebar .right--sidebar--bottom .users--container .user--item .previous--chatted-time .new--messages {
     width: 25px;
     height: 25px;
-    background-color: red;
+    background: linear-gradient(90deg, rgba(244, 175, 88, 0.7) 27.6%, rgba(219, 71, 71, 0.86) 76.04%);;
     border-radius: 50%;
     position: absolute;
     right: 0;
@@ -298,7 +304,7 @@ body {
     position: absolute;
     top: 120px;
     bottom: 75px;
-    height: 550px;
+    height: 500px;
     overflow-y: scroll;
 }
 
@@ -387,7 +393,7 @@ body {
     flex: 0 0 10%;
     max-width: 10%;
     height: 60px;
-    background-color: red;
+    background: linear-gradient(90deg, rgba(244, 175, 88, 0.7) 27.6%, rgba(219, 71, 71, 0.86) 76.04%);
     border-radius: 10px;
     text-align: center;
 }
